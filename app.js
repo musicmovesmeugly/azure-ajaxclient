@@ -26,7 +26,7 @@ var mongoClient = mongo.MongoClient;
 // Connect to the db. The callback function will be passed two arguments: err - which
 // will contain error information, and db - which will contain a connection to the
 // mongodb Database
-mongoClient.connect(env.process.CUSTOMCONNSTR_MONGODB_URL, function(err, db) {
+mongoClient.connect(process.env.CUSTOMCONNSTR_MONGODB_URL, function(err, db) {
   if(!err) {
     console.log("We are connected");
     // Store the connection to the mongodb database on the aplication object
